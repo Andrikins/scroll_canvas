@@ -34,7 +34,7 @@ base_names = [
     "Daun", 'Clown', 'Homunculus', 'Sabaka', 'Christiano', 'Racer', 'Flamingo', 'Skoobidoo', 'Papandos', 'Dikiy', 'Uganda'
 ]
 
-
+print(random_ref)
 def modify_name(name):
     modified_name = ""
     for char in name:
@@ -54,7 +54,9 @@ def generate_human_like_name():
 
 
 def get_signature(wallet):
-    url = f"https://canvas.scroll.cat/code/6CC2Z/sig/{wallet}"
+    refs = [ "OV4HI", "6CC2Z"]
+    random_ref = random.choice(refs)
+    url = f"https://canvas.scroll.cat/code/{random_ref}/sig/{wallet}"
     headers = {
         "Host": "canvas.scroll.cat",
         "Sec-Ch-Ua": '"Not/A)Brand";v="8", "Chromium";v="126"',
