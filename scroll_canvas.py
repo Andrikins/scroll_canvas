@@ -60,7 +60,7 @@ def generate_human_like_name():
 
 
 def get_signature(wallet):
-    refs = [ "OV4HI", "6CC2Z"]
+    refs = [ "R7WG7", "CS1KA", "3HWXQ", "QK9KX", "AEYAB", "XZEH3", "C1P3C"]
     random_ref = random.choice(refs)
     url = f"https://canvas.scroll.cat/code/{random_ref}/sig/{wallet}"
     headers = {
