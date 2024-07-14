@@ -97,6 +97,7 @@ def mint_shit():
     time.sleep(1)
     signature = get_signature(account.address)
     method_id = '0x4737576e'
+    data = method_id + random_name + signature
     tx = contract.functions.mint(random_name, signature).build_transaction({
         #'to': CONTRACT_ADDRESS,
         'chainId': SCROLL_CHAIN_ID,
@@ -104,7 +105,7 @@ def mint_shit():
         'gasPrice': '0'
         'nonce': nonce,
         'value': w3.to_wei(0.0005, 'ether'),
-        #'data': method_id,
+        #'data': data,
     })
     gasPrice = int(web3.eth.gas_price * (1 + (random.randint(1, 9) / 10)))
     time.sleep(1)
