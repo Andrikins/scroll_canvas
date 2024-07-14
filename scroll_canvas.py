@@ -18,7 +18,7 @@ RPC_SCROLL = 'https://scroll.drpc.org'
 # НУ ЭТО ТОЧНО НЕ НУЖНО ТРОГАТЬ!
 SCROLL_CHAIN_ID = 534352
 CONTRACT_ADDRESS = '0xB23AF8707c442f59BDfC368612Bd8DbCca8a7a5a'
-CONTRACT_ABI = '[{"inputs":[{"internalType":"address","name":"_logic","type":"address"},{"internalType":"address","name":"admin_","type":"address"},{"internalType":"bytes","name":"_data","type":"bytes"}],"stateMutability":"payable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"previousAdmin","type":"address"},{"indexed":false,"internalType":"address","name":"newAdmin","type":"address"}],"name":"AdminChanged","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"beacon","type":"address"}],"name":"BeaconUpgraded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"implementation","type":"address"}],"name":"Upgraded","type":"event"},{"stateMutability":"payable","type":"fallback"},{"stateMutability":"payable","type":"receive"}]'
+CONTRACT_ABI = '[{"inputs":[{"internalType":"address","name":"_logic","type":"address"},{"internalType":"address","name":"admin_","type":"address"},{"internalType":"bytes","name":"_data","type":"bytes"}],"stateMutability":"payable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"previousAdmin","type":"address"},{"indexed":false,"internalType":"address","name":"newAdmin","type":"address"}],"name":"AdminChanged","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"beacon","type":"address"}],"name":"BeaconUpgraded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"implementation","type":"address"}],"name":"Upgraded","type":"event"},{"stateMutability":"payable","type":"fallback"},{"stateMutability":"payable","type":"receive"},{"inputs":[{"internalType":"string","name":"username","type":"string"},{"internalType":"bytes","name":"referral","type":"bytes"}],"name":"mint","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"payable","type":"function"}]'
 scanner_link = 'https://scrollscan.com/tx/'
 
 with open('private_keys.txt', 'r') as file:
@@ -28,10 +28,16 @@ with open('proxy.txt', 'r') as proxy_file:
     proxies = [line.strip() for line in proxy_file]
 
 base_names = [
-    "Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Hannah", "Ivy", "Jack",
-    "Katherine", "Liam", "Mia", "Noah", "Olivia", "Paul", "Quinn", "Rachel", "Sophia", "Tom",
-    "Uma", "Vera", "William", "Xena", "Yara", "Zane", "KFC", "MCDONALDS", 'Degen', 'Huesos', 'Pedro', 'Ebaklak', 'Friend', 'Donald', 'Trump', 'Biden',
-    "Daun", 'Clown', 'Homunculus', 'Sabaka', 'Christiano', 'Racer', 'Flamingo', 'Skoobidoo', 'Papandos', 'Dikiy', 'Uganda'
+    "Zephyr", "Bruno", "Cleo", "Daphne", "Elio", "Fiona", "Gustav", "Hazel", "Indigo", "Jasper",
+    "Korra", "Leo", "Mila", "Nina", "Oscar", "Piper", "Quincy", "Rufus", "Sylvia", "Theo",
+    "Ulysses", "Violet", "Wesley", "Xander", "Yvette", "Zelda", "Blaze", "Celeste", "Dante", "Echo",
+    "Finn", "Gwen", "Heath", "Isla", "Juno", "Kian", "Lyra", "Maverick", "Nova", "Orion",
+    "Phoenix", "Quinn", "Raven", "Sage", "Talia", "Uriah", "Vesper", "Wynn", "Xia", "Yuri", "Zara"
+    "Axel", "Bianca", "Cassius", "Delilah", "Everett", "Freya", "Griffin", "Hugo", "Ines", "Jonah",
+    "Kaia", "Lachlan", "Maeve", "Nico", "Orla", "Pax", "Quentin", "Remi", "Seraphina", "Tobias",
+    "Ulric", "Valentina", "Wren", "Ximena", "Yannis", "Zinnia", "Archer", "Brielle", "Cyrus", "Daria",
+    "Ezra", "Felicity", "Gaia", "Harlan", "Iris", "Judah", "Kassidy", "Lorenzo", "Magnolia", "Nash",
+    "Ophelia", "Porter", "Quilla", "Rhea", "Stellan", "Thalia", "Uriel", "Vivian", "Wyatt", "Xanthe", "Yosef", "Zara"
 ]
 
 print(random_ref)
