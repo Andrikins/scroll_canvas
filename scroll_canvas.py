@@ -7,11 +7,11 @@ import json
 import string
 
 # ПРОКСИ ВКЛЮЧИТЬ ИЛИ ВЫКЛЮЧИТЬ? ФОРМАТ (IP:PORT:USERNAME:PASSWORD)
-PROXY = False
+PROXY = True
 # ЖДАТЬ КОГДА ЕБАНЫЙ ЧЕЙН РАЗДУПЛИТСЯ ИЛИ ПРОСТО ПИЗДОВАТЬ ВПЕРЕД?
 WAIT_FOR_SUCCESS = False
 # СОН МЕЖДУ АККАМИ
-SLEEP = 10, 30
+SLEEP = 700, 1900
 
 # НЕ ТРОГАЙ, СЫНОК, ЕБАНЕТ, РАЗВЕ ЧТО RPC_SCROLL.
 RPC_SCROLL = 'https://scroll.drpc.org'
@@ -66,7 +66,7 @@ def get_signature(wallet):
     headers = {
         "Host": "canvas.scroll.cat",
         "Sec-Ch-Ua": '"Not/A)Brand";v="8", "Chromium";v="126"',
-        "Accept-Language": "ru-RU",
+        "Accept-Language": "en-EN",
         "Sec-Ch-Ua-Mobile": "?0",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36",
         "Sec-Ch-Ua-Platform": '"Windows"',
