@@ -93,13 +93,18 @@ def check_minted():
 def mint_shit():
     contract = w3.eth.contract(address=Web3.to_checksum_address(CONTRACT_ADDRESS), abi=CONTRACT_ABI)
     random_name = generate_human_like_name()
+    nonce = web3.eth.get_transaction_count(public_address)
+    time.sleep(1)
     signature = get_signature(account.address)
+    method_id = '0x4737576e'
     tx = contract.functions.mint(random_name, signature).build_transaction({
+        #'to': CONTRACT_ADDRESS,
         'chainId': SCROLL_CHAIN_ID,
         'gas': '0',
         'gasPrice': '0'
-        'nonce': w3.eth.get_transaction_count(w3.to_checksum_address(account.address)),
+        'nonce': nonce,
         'value': w3.to_wei(0.0005, 'ether'),
+        #'data': method_id,
     })
     gasPrice = int(web3.eth.gas_price * (1 + (random.randint(1, 9) / 10)))
     time.sleep(1)
